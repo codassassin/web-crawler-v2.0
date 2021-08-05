@@ -54,7 +54,7 @@ class subdomainCrawler:
                     subdomains.append("https://" + test_url)
                     test_url = 'https://' + test_url
                     sys.stdout.write(self.y + '\r' + '[' + self.g + '↻' + self.y + ']' + f' Checking {test_url}')
-                    time.sleep(0.03)
+                    time.sleep(0.02)
 
                     if response:
                         print(self.b + '\r' + '[' + self.y + '+' + self.b + ']' + self.y +
