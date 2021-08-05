@@ -53,12 +53,12 @@ class subdomainCrawler:
                     response = self.request(test_url)
                     subdomains.append("https://" + test_url)
                     test_url = 'https://' + test_url
-                    sys.stdout.write(self.y + '\r' + '[' + self.g + '↻' + self.y + ']' + f' Checking {test_url}')
+                    sys.stdout.write(self.y + '\r' + '[' + self.g + '↻' + self.y + ']' + f' CHECKING: {test_url}')
                     time.sleep(0.02)
 
                     if response:
                         print(self.b + '\r' + '[' + self.y + '+' + self.b + ']' + self.y +
-                              f' Subdomain {test_url} exists !!')
+                              f' FOUND: {test_url} !!')
 
             with open("subdomains.csv", "r+") as f:
                 f.writelines(f'\n{target_url}, {subdomains}')
