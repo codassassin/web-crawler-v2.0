@@ -58,7 +58,7 @@ class subdomainCrawler:
 
                     if response:
                         print(self.b + '\r' + '[' + self.y + '+' + self.b + ']' + self.y +
-                              f' FOUND: {test_url} !!')
+                              f' FOUND: {test_url}')
 
             with open("subdomains.csv", "r+") as f:
                 f.writelines(f'\n{target_url}, {subdomains}')
